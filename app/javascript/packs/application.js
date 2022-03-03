@@ -3,13 +3,18 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import "jquery"
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '@doabit/semantic-ui-sass'
-import '@doabit/semantic-ui-sass/src/scss/semantic-ui.scss'
 
 Rails.start()
 Turbolinks.start()
-ActiveStorage.start()
+ActiveStorage.start();
+
+
+$(document).on('turbolinks:load', function functionName() {
+  $('.ui.dropdown').dropdown();
+})
