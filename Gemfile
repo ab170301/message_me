@@ -25,6 +25,7 @@ gem 'hirb'
 
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
+gem 'redis'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
