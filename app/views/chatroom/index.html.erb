@@ -27,6 +27,30 @@
 
   <div class="four wide column">
     <div class="ui fluid raised card chatbox">
+
+      <div class="ui middle aligned divided list">
+        
+        <% @users.each do |user| %>
+          <div class="item">
+            <div class="right floated content">
+              <div class="ui button">Add</div>
+            </div>
+            <i class="address book large orange icon"></i>
+            <div class="content">
+              <%= user.username %>
+            </div>
+          </div>
+        <% end %>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- 
       <div class="content">
         <div class="ui inverted vertical menu">
           <a class="active item">
@@ -40,7 +64,9 @@
           </a>
         </div>
       </div>
-    </div>
-  </div>
 
-</div>
+
+
+
+
+>
