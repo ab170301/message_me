@@ -21,12 +21,27 @@ window.scroll_bottom = function() {
   }
 }
 
+// enter message by clicking enter
+window.submit_message = function() {
+  $('#message_body').on('keydwon', function(e) {
+    if (e.keyCode == 13) {  // enter keydown = 13
+      $('button').click();
+    };
+  });
+};
+
 
 $(document).on('turbolinks:load', function functionName() {
   $('.ui.dropdown').dropdown();
 
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
+  });
+  
+  submit_message();
+
+  $(document).bind("ajax:beforeSend", function(){
+    $('#text-field').val('');
   });
 
   scroll_bottom();
